@@ -9,15 +9,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class iTextMergePDF {
-    private static final String PATH_TO_FOLDER = "C:\\XX\\PDF";
+    private static final String PATH_TO_FOLDER = "C:\\Users\\shiva\\IdeaProjects\\CombinePDF\\src\\main\\resources";
     private static final String MERGED_FILE_NAME = "mergedFile.pdf";
 
-    static public void main(String[] args) throws Exception{
+    static public void main(String[] args) throws DocumentException, IOException {
         mergePDF(PATH_TO_FOLDER, MERGED_FILE_NAME);
     }
     public static void mergePDF(String directory, String targetFile) throws DocumentException, IOException {
         File dir = new File(directory);
         File[] filesToMerge = dir.listFiles((file, fileName) -> fileName.endsWith(".pdf"));
+
         Document document = new Document();
         FileOutputStream outputStream = new FileOutputStream(PATH_TO_FOLDER + "\\" + targetFile);
         PdfCopy copy = new PdfSmartCopy(document, outputStream);
