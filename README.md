@@ -1,5 +1,5 @@
 # CombinePDF
 Java + Swing <br />
-App allows to browse to a folder and set a name for a file, which will be a .pdf file combining all .pdf files inside the indicated folder. <br />
+The App combines all .pdf files inside an indicated folder, into one .pdf file of a chosen name. <br />
 <br />
 ![main image 2](https://github.com/viktorbobinski/CombinePDF/blob/master/images/combine_pdf.JPG)
